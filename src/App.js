@@ -6,7 +6,7 @@ function App() {
 
   const obtenerHora = async () => {
     try {
-      const response = await fetch('http://localhost:3000/hora');
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/hora`);
       const data = await response.json();
       console.log(data); 
       setHora(data.hora);
@@ -17,7 +17,7 @@ function App() {
 
   const obtenerHoraDesdeDB = async () => {
     try {
-      const response = await fetch('http://localhost:3000/db');
+      const response = await fetch(`${process.env.REACT_APP_API_URL}/db`);
       const data = await response.json();
       console.log(data);
       setHora(data[0]?.now);
