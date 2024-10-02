@@ -1,38 +1,60 @@
+body {
+  background-color: black; /* Fondo negro */
+  color: white; /* Letra blanca */
+  margin: 0; /* Eliminar margen por defecto */
+  height: 100vh; /* Ocupa toda la altura de la ventana */
+  display: flex; /* Usar flexbox para centrar */
+  align-items: center; /* Centrarlos verticalmente */
+  justify-content: center; /* Centrarlos horizontalmente */
+}
+
 .App {
-  text-align: center;
+  text-align: center; /* Centrar texto en el contenedor */
+  display: flex; /* Usar flexbox */
+  flex-direction: column; /* Colocar los elementos en columna */
+  align-items: center; /* Centrarlos horizontalmente */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+h1 {
+  margin: 0; /* Eliminar margen */
+  margin-bottom: 15px; /* Añadir margen inferior */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+.button-container {
+  display: flex; /* Usar flexbox para alinear botones */
+  flex-direction: row; /* Colocar botones uno al lado del otro */
+  align-items: center; /* Centrar botones verticalmente */
+  gap: 10px; /* Espacio entre los botones */
+  justify-content: center; /* Centrar botones horizontalmente */
+}
+
+button {
+  background-color: black; /* Fondo negro para el botón */
+  color: white; /* Texto blanco */
+  border: 2px solid white; /* Borde blanco fino */
+  padding: 0.5em 1em; /* Espaciado interno en em */
+  font-size: 1em; /* Tamaño de letra ajustable */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s, color 0.3s; /* Transición suave */
+}
+
+button:hover {
+  background-color: white; /* Cambia el fondo a blanco al pasar el mouse */
+  color: black; /* Cambia el texto a negro al pasar el mouse */
+}
+
+/* Media Queries para Responsividad */
+@media (max-width: 600px) {
+  body {
+    font-size: 1em; /* Reducir tamaño de fuente en pantallas pequeñas */
   }
-}
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+  button {
+    padding: 0.4em 0.8em; /* Ajustar el espaciado interno en pantallas pequeñas */
+    font-size: 0.9em; /* Tamaño de letra más pequeño para botones */
   }
-  to {
-    transform: rotate(360deg);
+
+  h1 {
+    font-size: 1.5em; /* Ajustar tamaño del título en pantallas pequeñas */
   }
 }
